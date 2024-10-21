@@ -9,11 +9,82 @@ body {
   gap: 10px;
   border: 3px green solid;
 }
-
 .main-header {
-  border: 2px red solid;
+  padding-left: 22px;
+  padding-right: 22px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 19px;
+}
+
+.navbar-open-icon {
+  width: 25px;
+  height: fit-content;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  height: 35px;
+  width: 550px;
+  border: 1px solid #303030;
+  border-radius: 40px;
+  display: flex;
+  flex-shrink: 10;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5px;
+  background-color: #121212;
+}
+
+.input {
+  height: px;
+  width: 400px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  background-color: #121212;
+  color: #e2e2e2;
+}
+
+.search-icon-div {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: #222222;
+  height: 35px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.voice-search-button {
+  height: 40px;
+}
+
+.buttons-custom {
+  display: flex;
+  align-items: center;
+}
+
+.button-header {
+  height: 42px;
 }
 
 .not-header {
