@@ -2,6 +2,8 @@ const example = {
     id: '1',
     title: 'la batalla más arquitectónica de julio césar',
     file: 'videos/1.mp4',
+    views: '478K',
+    date: '2 weeks',
     thumbnail: 'videos/thumbnails/1.jpg',
     channel: 'Ter',
     channelPhoto: 'channels/Ter.jpg'
@@ -64,7 +66,35 @@ const addVideoInfo = (videoData) => {
     document.getElementById(`video-info-${videoData.id}`).append(videoDataElement)
 }
 
+const addVideoData = (videoData) => {
+    // Add title
+    const videoTitleDivElement = document.createElement('div')
+    const videoTitleSpanElement = document.createElement('span')
+
+    videoTitleDivElement.setAttribute('id', `video-title-div-${videoData.id}`)
+    videoTitleDivElement.setAttribute('class', 'video-title')
+    videoTitleSpanElement.textContent = videoData.title
+
+    document.getElementById(`video-data-${videoData.id}`).append(videoTitleDivElement)
+    document.getElementById(`video-title-div-${videoData.id}`).append(videoTitleSpanElement)
+
+    // Add channel, views and relative date
+    const videoChannelAndViewsElement = document.createElement('div')
+    const channelNameElement = document.createElement('span')
+    const viewsAndDateElement = document.createElement('span')
+
+    videoChannelAndViewsElement.setAttribute('id', `video-channel-views-${videoData.id}`)
+    videoChannelAndViewsElement.setAttribute('class', `video-channel-views`)
+    channelNameElement.textContent = videoData.channel
+    viewsAndDateElement.textContent = `${videoData.views} views - ${videoData.date} ago`
+
+    document.getElementById(`video-data-${videoData.id}`).append(videoChannelAndViewsElement)
+    document.getElementById(`video-channel-views-${videoData.id}`).append(channelNameElement)
+    document.getElementById(`video-channel-views-${videoData.id}`).append(viewsAndDateElement)
+}
+
 addVideoCard(example)
 addVideoContainer(example)
 addVideoDetails(example)
 addVideoInfo(example)
+addVideoData(example)
