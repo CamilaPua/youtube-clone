@@ -1,13 +1,65 @@
-const example = {
-    id: '1',
-    title: 'la batalla más arquitectónica de julio césar',
-    file: 'videos/1.mp4',
-    views: '478K',
-    date: '2 weeks',
-    thumbnail: 'videos/thumbnails/1.jpg',
-    channel: 'Ter',
-    channelPhoto: 'channels/Ter.jpg'
-}
+const videos = [
+    {
+        id: '1',
+        title: 'la batalla más arquitectónica de julio césar',
+        file: 'videos/1.mp4',
+        views: '478K',
+        date: '2 weeks',
+        thumbnail: 'videos/thumbnails/1.jpg',
+        channel: 'Ter',
+        channelPhoto: 'channels/Ter.jpg'
+    },
+    {
+        id: '2',
+        title: "If you're ambitious but lazy, please watch this video…",
+        file: 'videos/2.mp4',
+        views: '1M',
+        date: '1 month',
+        thumbnail: 'videos/thumbnails/2.jpg',
+        channel: 'atomiumjae',
+        channelPhoto: 'channels/atomiumjae.jpg'
+    },
+    {
+        id: '3',
+        title: 'Carefully Pushing Enemy When I know My Random Teammate Have No Use😶',
+        file: 'videos/3.mp4',
+        views: '11',
+        date: '1 day',
+        thumbnail: 'videos/thumbnails/3.jpg',
+        channel: 'HomeBoyCODM',
+        channelPhoto: 'channels/HomeBoyCODM.jpg'
+    },
+    {
+        id: '4',
+        title: 'ASMR Cranial Nerve Exam (testing your senses) 🧠🌡️',
+        file: 'videos/4.mp4',
+        views: '7.1K',
+        date: '3 weeks',
+        thumbnail: 'videos/thumbnails/4.jpg',
+        channel: 'ASMR Andy',
+        channelPhoto: 'channels/ASMR Andy.jpg'
+    },
+    {
+        id: '5',
+        title: 'No seas tan programador.',
+        file: 'videos/5.mp4',
+        views: '30K',
+        date: '3 weeks',
+        thumbnail: 'videos/thumbnails/5.jpg',
+        channel: 'Dot Dager',
+        channelPhoto: 'channels/Dot Dager.jpg'
+    },
+    {
+        id: '6',
+        title: 'OpenAI o1: Camino a las IAs con RAZONAMIENTO SOBREHUMANO | Análisis completo',
+        file: 'videos/6.mp4',
+        views: '212K',
+        date: '2 weeks',
+        thumbnail: 'videos/thumbnails/6.jpg',
+        channel: 'Dot CSV',
+        channelPhoto: 'channels/Dot CSV.jpg'
+    }
+];
 
 const addVideoCard = (videoData) => {
     const videoCardElement = document.createElement('div')
@@ -101,4 +153,7 @@ const addVideoToLayout = (videoData) => {
     addVideoData(videoData)
 }
 
-addVideoToLayout(example)
+for (let i = 0; i < videos.length; i++) {
+    const video = videos[i];
+    addVideoToLayout(video)
+}
