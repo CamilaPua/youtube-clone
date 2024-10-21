@@ -93,8 +93,12 @@ const addVideoData = (videoData) => {
     document.getElementById(`video-channel-views-${videoData.id}`).append(viewsAndDateElement)
 }
 
-addVideoCard(example)
-addVideoContainer(example)
-addVideoDetails(example)
-addVideoInfo(example)
-addVideoData(example)
+const addVideoToLayout = (videoData) => {
+    addVideoCard(videoData)
+    addVideoContainer(videoData)
+    addVideoDetails(videoData)
+    addVideoInfo(videoData)
+    addVideoData(videoData)
+}
+
+addVideoToLayout(example)
