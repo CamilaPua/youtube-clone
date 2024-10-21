@@ -24,8 +24,16 @@ body {
 
 .nav-bar {
   border: 2px orange solid;
+  height: 100%;
+  width: fit-content;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.navbar-icon {
+  width: 70px;
 }
 
 #videos-layout {
