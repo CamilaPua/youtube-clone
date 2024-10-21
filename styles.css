@@ -51,4 +51,13 @@ body {
 
 .video-info {
   border: 2px red solid;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.channel-photo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }

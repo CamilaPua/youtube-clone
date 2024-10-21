@@ -50,6 +50,21 @@ const addVideoDetails = (videoData) => {
     document.getElementById(`video-details-${videoData.id}`).append(threeDotsElement)
 }
 
+const addVideoInfo = (videoData) => {
+    const channelPhoto = document.createElement('img')
+    const videoDataElement = document.createElement('div')
+
+    channelPhoto.setAttribute('class', 'channel-photo')
+    channelPhoto.setAttribute('src', videoData.channelPhoto)
+
+    videoDataElement.setAttribute('id', `video-data-${videoData.id}`)
+    videoDataElement.setAttribute('class', 'video-data')
+
+    document.getElementById(`video-info-${videoData.id}`).append(channelPhoto)
+    document.getElementById(`video-info-${videoData.id}`).append(videoDataElement)
+}
+
 addVideoCard(example)
 addVideoContainer(example)
 addVideoDetails(example)
+addVideoInfo(example)
