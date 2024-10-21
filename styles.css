@@ -61,3 +61,14 @@ body {
   height: 30px;
   width: 30px;
 }
+
+.video-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.video-channel-views {
+  display: flex;
+  flex-direction: column;
+}
