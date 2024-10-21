@@ -38,5 +38,18 @@ const addVideoContainer = (videoData) => {
     document.getElementById(`video-container-${videoData.id}`).append(videoElement)
 }
 
+const addVideoDetails = (videoData) => {
+    const videoInfoElement = document.createElement('div')
+    const threeDotsElement = document.createElement('div')
+
+    videoInfoElement.setAttribute('class', 'video-info')
+    videoInfoElement.setAttribute('id', `video-info-${videoData.id}`)
+    threeDotsElement.innerHTML = '...'
+
+    document.getElementById(`video-details-${videoData.id}`).append(videoInfoElement)
+    document.getElementById(`video-details-${videoData.id}`).append(threeDotsElement)
+}
+
 addVideoCard(example)
 addVideoContainer(example)
+addVideoDetails(example)

@@ -40,3 +40,15 @@ body {
   object-fit: contain;
   border-radius: 15px;
 }
+
+.video-details {
+  border: 2px green solid;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.video-info {
+  border: 2px red solid;
+}
