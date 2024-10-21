@@ -98,6 +98,7 @@ const addVideoDetails = (videoData) => {
 
     videoInfoElement.setAttribute('class', 'video-info')
     videoInfoElement.setAttribute('id', `video-info-${videoData.id}`)
+    threeDotsElement.setAttribute('class', 'video-three-dots')
     threeDotsElement.innerHTML = '...'
 
     document.getElementById(`video-details-${videoData.id}`).append(videoInfoElement)
