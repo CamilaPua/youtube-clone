@@ -34,3 +34,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.video-custom {
+  width: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+}

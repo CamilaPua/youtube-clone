@@ -24,4 +24,19 @@ const addVideoCard = (videoData) => {
     document.getElementById(`video-card-${videoData.id}`).append(videoDetailsElement)
 }
 
+const addVideoContainer = (videoData) => {
+    const videoElement = document.createElement('video')
+
+    videoElement.setAttribute('src', videoData.file);
+    videoElement.setAttribute('class', 'video-custom');
+    videoElement.setAttribute('id', `video-${videoData.id}`);
+    videoElement.setAttribute('poster', videoData.thumbnail);
+    videoElement.addEventListener('mouseover', () => { videoElement.play() });
+    videoElement.addEventListener('mouseleave', () => { videoElement.load() });
+    videoElement.muted = true;
+
+    document.getElementById(`video-container-${videoData.id}`).append(videoElement)
+}
+
 addVideoCard(example)
+addVideoContainer(example)
